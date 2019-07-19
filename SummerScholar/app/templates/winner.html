@@ -1,0 +1,30 @@
+{% include "header.html" %}
+
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">All Student</div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Class Name</th>
+                <th>School Name</th>
+                <th>Game Name</th>
+                <th>Marks</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{item.student_name}}</td>
+                <td>{{item.class_name}}</td>
+                <td>{{item.school_name}}</td>
+                <td>{{item.game_name}}</td>
+                <td>{{item.marks}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "footer.html" %}
